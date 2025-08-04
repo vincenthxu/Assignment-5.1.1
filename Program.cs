@@ -11,8 +11,8 @@
                 int num;
                 foreach (var arg in args)
                 {
-                    num = Convert.ToInt32(arg);
-                    Console.WriteLine($"{num} : {isPalindrome(num)}");
+                    if(int.TryParse(arg, out num))
+                        Console.WriteLine($"{num} : {isPalindrome(num)}");
                 }
             }
         }
